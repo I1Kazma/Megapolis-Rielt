@@ -23,6 +23,7 @@ html
 
 *::-webkit-scrollbar-thumb
     border-radius: 20px
+    background: $yellow
 
 *::-webkit-scrollbar-track
     border: 4px solid #fff
@@ -56,6 +57,9 @@ a
 
 .main
     padding-top: 123px
+    display: flex
+    flex-direction: column
+    gap: 20px
 
 .block-title
     text-align: center
@@ -63,6 +67,17 @@ a
     font-size: 40px
     color: #FEFEFE
 
+    @include desktop-small
+        font-size: 36px
+
+    @include tablet
+        font-size: 32px
+
+    @include mobile-big
+        font-size: 27px
+
+    @include mobile
+        font-size: 20px
 section
     width: 100%
     display: flex

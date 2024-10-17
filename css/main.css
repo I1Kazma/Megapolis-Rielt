@@ -20,6 +20,7 @@ html {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
+  background: #ffb500;
 }
 
 *::-webkit-scrollbar-track {
@@ -61,6 +62,9 @@ a {
 
 .main {
   padding-top: 123px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .block-title {
@@ -68,6 +72,26 @@ a {
   padding-top: 45px;
   font-size: 40px;
   color: #FEFEFE;
+}
+@media (max-width: 992px) {
+  .block-title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .block-title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .block-title {
+    font-size: 27px;
+  }
+}
+@media (max-width: 380px) {
+  .block-title {
+    font-size: 20px;
+  }
 }
 
 section {
@@ -441,6 +465,11 @@ section {
   margin-top: 85px;
   margin-bottom: 113px;
 }
+@media (max-width: 768px) {
+  .mortrage__layout .button {
+    margin: 20px 0px 30px;
+  }
+}
 
 .mortrage__items {
   display: flex;
@@ -458,6 +487,16 @@ section {
   border: 1px solid white;
   border-radius: 550px;
   max-width: 175px;
+}
+@media (max-width: 768px) {
+  .mortrage__items .item {
+    max-width: 169px;
+  }
+}
+@media (max-width: 576px) {
+  .mortrage__items .item {
+    max-width: 169px;
+  }
 }
 .mortrage__items .item a {
   margin: 28px 35px;
@@ -504,6 +543,9 @@ section {
 .objects {
   position: relative;
 }
+.objects .container {
+  position: relative;
+}
 
 .objects__layout {
   max-width: 100%;
@@ -512,7 +554,7 @@ section {
 
 .objects__header {
   position: absolute;
-  z-index: 2;
+  z-index: 6;
   right: 20px;
   bottom: 100px;
 }
@@ -530,9 +572,13 @@ section {
 }
 @media (max-width: 576px) {
   .objects__header {
-    bottom: auto;
-    bottom: calc(64vh - 2em);
+    bottom: 27em;
     flex-direction: row;
+  }
+}
+@media (max-width: 380px) {
+  .objects__header {
+    bottom: 29em;
   }
 }
 
@@ -700,10 +746,12 @@ section {
 }
 
 .objects__description {
+  margin: -53px 0px;
   display: flex;
   flex-direction: column;
   gap: 40px;
   width: 100%;
+  z-index: 5;
   padding: 20px 400px 20px 10%;
 }
 @media (max-width: 992px) {
@@ -727,6 +775,11 @@ section {
   font-size: 16px;
   color: white;
 }
+@media (max-width: 768px) {
+  .objects__text span {
+    font-size: 14px;
+  }
+}
 
 .objects__gallery {
   display: flex;
@@ -749,6 +802,21 @@ section {
   }
 }
 
+.background {
+  background: url(../img/volna.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -80px;
+  width: 100%;
+  height: 80px;
+  z-index: 3;
+}
+@media (max-width: 992px) {
+  .background {
+    background-position: bottom;
+  }
+}
+
 .about {
   background: url(../img/about-banner.png) no-repeat;
   background-size: cover;
@@ -767,13 +835,18 @@ section {
 }
 @media (max-width: 576px) {
   .about__layout {
-    padding: 120px 20px;
+    padding: 90px 20px;
   }
 }
 
 .about__text {
   font-size: 16px;
   color: white;
+}
+@media (max-width: 768px) {
+  .about__text {
+    font-size: 14px;
+  }
 }
 
 .about__title {
@@ -782,6 +855,26 @@ section {
   text-transform: uppercase;
   padding-top: 0px;
 }
+@media (max-width: 992px) {
+  .about__title {
+    font-size: 72px;
+  }
+}
+@media (max-width: 768px) {
+  .about__title {
+    font-size: 56px;
+  }
+}
+@media (max-width: 992px) {
+  .about__title {
+    font-size: 42px;
+  }
+}
+@media (max-width: 992px) {
+  .about__title {
+    font-size: 28px;
+  }
+}
 
 .about__wrapper {
   border-left: 7px solid #ffb500;
@@ -789,12 +882,18 @@ section {
   max-width: 717px;
   padding-bottom: 72px;
 }
+@media (max-width: 768px) {
+  .about__wrapper {
+    padding: 40px 20px;
+  }
+}
 
 .footer {
   background: black;
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: -20px;
 }
 .footer h2 {
   font-size: 30px;
@@ -858,6 +957,7 @@ section {
 @media (max-width: 768px) {
   .footer__layout {
     flex-direction: column-reverse;
+    padding: 30px 3%;
   }
 }
 
@@ -897,6 +997,11 @@ section {
   font-weight: 200;
   display: flex;
   gap: 10px;
+}
+@media (max-width: 768px) {
+  .footer__contacts ul li, .footer__contacts ul a {
+    font-size: 14px;
+  }
 }
 .footer__contacts ul a {
   color: #ffb500;

@@ -12,6 +12,9 @@
         margin-top: 85px
         margin-bottom: 113px
 
+        @include tablet
+            margin: 20px 0px 30px
+
 .mortrage__items
     display: flex
     justify-content: space-between
@@ -26,6 +29,12 @@
         border: 1px solid white
         border-radius: 550px
         max-width: 175px
+
+        @include tablet
+            max-width: 169px
+
+        @include mobile-big
+            max-width: 169px
 
         a
             margin: 28px 35px

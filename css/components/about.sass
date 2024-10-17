@@ -12,11 +12,14 @@
         padding: 150px 70px
 
     @include mobile-big
-        padding: 120px 20px
+        padding: 90px 20px
 
 .about__text
     font-size: 16px
     color: white
+
+    @include tablet
+        font-size: 14px
 
 .about__title
     text-align: left
@@ -24,8 +27,23 @@
     text-transform: uppercase
     padding-top: 0px
 
+    @include desktop-small
+        font-size: 72px
+
+    @include tablet
+        font-size: 56px
+
+    @include desktop-small
+        font-size: 42px
+
+    @include desktop-small
+        font-size: 28px
+
 .about__wrapper
     border-left: 7px solid $yellow
     padding-left: 47px
     max-width: 717px
     padding-bottom: 72px
+
+    @include tablet
+        padding: 40px 20px

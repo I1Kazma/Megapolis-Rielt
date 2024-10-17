@@ -20,6 +20,7 @@ html {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
+  background: #ffb500;
 }
 
 *::-webkit-scrollbar-track {
@@ -61,6 +62,9 @@ a {
 
 .main {
   padding-top: 123px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .block-title {
@@ -68,6 +72,26 @@ a {
   padding-top: 45px;
   font-size: 40px;
   color: #FEFEFE;
+}
+@media (max-width: 992px) {
+  .block-title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .block-title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .block-title {
+    font-size: 27px;
+  }
+}
+@media (max-width: 380px) {
+  .block-title {
+    font-size: 20px;
+  }
 }
 
 section {
