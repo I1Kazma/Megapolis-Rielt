@@ -1,0 +1,37 @@
+.mortrage__layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 38px;
+  padding: 0px 20px;
+}
+
+.mortrage__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+.mortrage__items .item {
+  border: 1px solid white;
+  border-radius: 550px;
+  max-width: 175px;
+}
+.mortrage__items .item a {
+  margin: 28px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  max-width: 118px;
+}
+.mortrage__items .item a .title {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}/*# sourceMappingURL=mortrage.css.map */

@@ -1,0 +1,167 @@
+.header
+    position: fixed
+    width: 100%
+    z-index: 11
+    background: #252525
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border-bottom: 1px solid #252525
+
+.sticky
+    border-bottom: 1px solid white
+
+    .header__layout
+        padding: 10px 3%
+
+.header__layout
+    padding: 26px 3%
+    display: flex
+    justify-content: space-between
+    gap: 30px
+    width: 100%
+
+    align-items: center
+
+.header__logo
+    img
+        @include mobile-big
+            max-width: 150px
+
+.nav__toggle
+    left: 0px !important
+
+.header__nav
+    width: 100%
+    align-items: center
+    display: flex
+    justify-content: center
+    max-width: 815px
+
+    @include desktop-small
+        position: absolute
+        background: black
+        left: -1000px
+        top: 0px
+        bottom: 0px
+        width: 100%
+        height: 100%
+        max-width: none
+        height: 100vh
+        flex-direction: column
+        align-items: baseline
+        justify-content: flex-start
+        padding: 50px 50px
+        gap: 50px
+
+    @include tablet
+        padding: 50px 30px
+
+    @include mobile-big
+        padding: 26px 20px
+
+    ul
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+        @include desktop-small
+            flex-direction: column
+
+    li
+        display: flex
+
+        @include desktop-small
+            border-top: 1px solid grey
+            border-bottom: 1px solid grey
+            margin: -0.5px 0px
+
+            &:hover
+                position: relative
+                z-index: 2
+                border-top: 1px solid $yellow
+                border-bottom: 1px solid $yellow
+
+    a
+        color: white
+        font-size: 15px
+        font-weight: bold
+        text-transform: uppercase
+
+        &:hover
+            color: $yellow
+
+        @media (max-width: 1200px)
+            font-size: 12px
+
+        @include desktop-small
+            padding: 24px 2px
+            width: 100%
+
+.header__tel
+    display: flex
+    width: 100%
+    max-width: 180px
+    align-items: center
+    justify-content: center
+    gap: 5px
+
+    @include desktop-small
+        display: none
+
+    &:hover
+        span
+            color: $yellow
+    span
+        font-size: 15px
+        color: white
+        font-weight: bold
+
+    .colored
+        color: $yellow
+
+.header__close
+    display: none
+    cursor: pointer
+
+    &:hover path
+        fill: $yellow
+
+    @include desktop-small
+        display: flex
+        gap: 5px
+        flex-direction: column
+
+    span
+        background: $yellow
+        height: 3px
+        width: 25px
+
+.header__hamburger
+    display: none
+    cursor: pointer
+    padding: 10px
+
+    &:hover span
+        background: $blue
+
+    @include desktop-small
+        display: flex
+        gap: 5px
+        flex-direction: column
+
+    span
+        background: $yellow
+        height: 3px
+        width: 25px
+
+.social__links
+    display: none
+
+    @include desktop-small
+        display: flex
+
+    .header__tel
+        display: flex
