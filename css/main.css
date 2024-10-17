@@ -803,10 +803,10 @@ section {
 }
 
 .background {
-  background: url(../img/volna.png);
+  background: url(../img/volna.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -80px;
+  top: -78px;
   width: 100%;
   height: 80px;
   z-index: 3;
