@@ -1,0 +1,49 @@
+
+.mortgage__layout
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 100%
+    gap: 38px
+    padding: 0px 20px
+
+    .button
+        margin-top: 85px
+        margin-bottom: 113px
+
+        @include tablet
+            margin: 20px 0px 30px
+
+.mortgage__items
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    gap: 20px
+    justify-content: center
+
+    .item
+        border-radius: 5px
+        background: #1c1c1c
+        max-width: 375px
+        width: 100%
+
+        @media (max-width: 810px)
+            max-width: none
+
+        &:hover
+            transform: translateY(-10px)
+
+        a
+            padding: 28px 35px
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 5px
+
+            .title
+                color: white
+                text-align: center
+                font-size: 16px

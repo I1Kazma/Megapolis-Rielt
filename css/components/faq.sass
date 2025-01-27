@@ -17,6 +17,8 @@ $yellow: #F0CC20
 
     .faq__heading
         width: 100%
+        position: relative
+        z-index: 1
 
         h2
             font-size: 70px
@@ -80,7 +82,7 @@ $yellow: #F0CC20
     cursor: pointer
     transition: 0.3s ease
 
-    &_question
+    &__question
         padding: 24px 30px 20px 30px
         font-size: 17px
         color: white
@@ -90,7 +92,7 @@ $yellow: #F0CC20
         align-items: center
         transition: .3s
 
-    &_question:hover
+    &__question:hover
         color: $yellow
 
     &_question-marker
@@ -101,10 +103,10 @@ $yellow: #F0CC20
         transition: .3s
         flex-shrink: 0
 
-    [open] &_question-marker
+    [open] &__question-marker
         --angle: 45deg
 
-    &_answer
+    &__answer
         padding: 0 30px 24px 30px
         font-size: 15px
         line-height: 150%

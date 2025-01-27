@@ -51,7 +51,7 @@ a {
   color: inherit;
 }
 
-.container {
+.header .container {
   max-width: 1600px;
   width: 100%;
   display: flex;
@@ -452,7 +452,7 @@ section {
   background: #F0CC20;
 }
 
-.mortrage__layout {
+.mortgage__layout {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -461,38 +461,38 @@ section {
   gap: 38px;
   padding: 0px 20px;
 }
-.mortrage__layout .button {
+.mortgage__layout .button {
   margin-top: 85px;
   margin-bottom: 113px;
 }
 @media (max-width: 768px) {
-  .mortrage__layout .button {
+  .mortgage__layout .button {
     margin: 20px 0px 30px;
   }
 }
 
-.mortrage__items {
+.mortgage__items {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   gap: 20px;
   justify-content: center;
 }
-.mortrage__items .item {
+.mortgage__items .item {
   border-radius: 5px;
   background: #1c1c1c;
   max-width: 375px;
   width: 100%;
 }
 @media (max-width: 810px) {
-  .mortrage__items .item {
+  .mortgage__items .item {
     max-width: none;
   }
 }
-.mortrage__items .item:hover {
+.mortgage__items .item:hover {
   transform: translateY(-10px);
 }
-.mortrage__items .item a {
+.mortgage__items .item a {
   padding: 28px 35px;
   height: 100%;
   display: flex;
@@ -501,7 +501,7 @@ section {
   justify-content: center;
   gap: 5px;
 }
-.mortrage__items .item a .title {
+.mortgage__items .item a .title {
   color: white;
   text-align: center;
   font-size: 16px;
@@ -881,6 +881,8 @@ section {
 }
 .faq .faq__heading {
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 .faq .faq__heading h2 {
   font-size: 70px;
@@ -951,7 +953,7 @@ section {
   cursor: pointer;
   transition: 0.3s ease;
 }
-.faq-item_question {
+.faq-item__question {
   padding: 24px 30px 20px 30px;
   font-size: 17px;
   color: white;
@@ -961,7 +963,7 @@ section {
   align-items: center;
   transition: 0.3s;
 }
-.faq-item_question:hover {
+.faq-item__question:hover {
   color: #F0CC20;
 }
 .faq-item_question-marker {
@@ -972,10 +974,10 @@ section {
   transition: 0.3s;
   flex-shrink: 0;
 }
-[open] .faq-item_question-marker {
+[open] .faq-item__question-marker {
   --angle: 45deg;
 }
-.faq-item_answer {
+.faq-item__answer {
   padding: 0 30px 24px 30px;
   font-size: 15px;
   line-height: 150%;
@@ -1095,7 +1097,7 @@ form .mortgage__button:hover {
   background: #ffe776;
 }
 
-.mortgage-value {
+.mortgage__value {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1106,14 +1108,14 @@ form .mortgage__button:hover {
   padding: 20px;
 }
 @media (max-width: 768px) {
-  .mortgage-value {
+  .mortgage__value {
     padding: 10px 20px;
   }
 }
-.mortgage-value option {
+.mortgage__value option {
   color: black;
 }
-.mortgage-value input, .mortgage-value select {
+.mortgage__value .mortgage__input, .mortgage__value .mortgage__select {
   background: transparent;
   color: #FEFEFE;
   font-size: 40px;
@@ -1125,27 +1127,27 @@ form .mortgage__button:hover {
   z-index: 2;
 }
 @media (max-width: 768px) {
-  .mortgage-value input, .mortgage-value select {
+  .mortgage__value .mortgage__input, .mortgage__value .mortgage__select {
     font-size: 28px;
     padding-bottom: 15px;
   }
 }
-.mortgage-value .irs {
+.mortgage__value .irs {
   position: absolute;
   width: 100%;
   bottom: 17px;
 }
-.mortgage-value .irs--round {
+.mortgage__value .irs--round {
   width: 93%;
 }
-.mortgage-value .irs--round .irs-bar {
+.mortgage__value .irs--round .irs-bar {
   background: #F0CC20;
   top: 65px;
 }
-.mortgage-value .irs--round .irs-handle {
+.mortgage__value .irs--round .irs-handle {
   top: 54px;
 }
-.mortgage-value .irs-handle.single {
+.mortgage__value .irs-handle.single {
   width: 24px;
   height: 14px;
   border-radius: 7px;
@@ -1153,25 +1155,25 @@ form .mortgage__button:hover {
   border: none;
   top: 60px;
 }
-.mortgage-value .irs-single {
+.mortgage__value .irs-single {
   display: none;
 }
-.mortgage-value .irs--round .irs-min,
-.mortgage-value .irs--round .irs-max {
+.mortgage__value .irs--round .irs-min,
+.mortgage__value .irs--round .irs-max {
   font-size: 12px;
   color: #FEFEFE;
   border: none;
   background: none;
   top: 40px;
 }
-.mortgage-value label {
+.mortgage__value label {
   font-size: 17px;
   font-weight: 400;
   color: #FEFEFE;
   width: 100%;
 }
 @media (max-width: 768px) {
-  .mortgage-value label {
+  .mortgage__value label {
     padding-top: 15px;
   }
 }
@@ -1221,7 +1223,7 @@ form .mortgage__button:hover {
   justify-content: space-between;
   gap: 30px;
 }
-.mortgage__results ul li, .mortgage__results ul .mortgage__payment {
+.mortgage__results ul .mortgage__result-item, .mortgage__results ul .mortgage__payment {
   display: flex;
   flex-direction: column;
   gap: 15px;

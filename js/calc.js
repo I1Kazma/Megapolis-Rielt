@@ -32,15 +32,15 @@ const initRangeSlider = ($slider, $input, min, max, from, postfix = "") => {
 };
 
 $(document).ready(() => {
-    initRangeSlider($("#price"), $("#price-input"), 1700000, 6000000, 3000000, " ₽");
-    initRangeSlider($("#payment"), $("#payment-input"), 3000000, 4500000, 3500000, " ₽");
-    initRangeSlider($("#term"), $("#term-input"), 1, 30, 20, " лет");
+    initRangeSlider($("#priceValue"), $("#priceInput"), 1700000, 6000000, 3000000, " ₽");
+    initRangeSlider($("#paymentValue"), $("#paymentInput"), 3000000, 4500000, 3500000, " ₽");
+    initRangeSlider($("#termValue"), $("#termInput"), 1, 30, 20, " лет");
 });
 
 const calculatePayment = () => {
     const getNumber = (id) => parseFloat(document.getElementById(id).value.replace(/\s+/g, "")) || 0;
-    const amount = getNumber("price-input");
-    const years = getNumber("term-input");
+    const amount = getNumber("priceInput");
+    const years = getNumber("termInput");
 
     if (amount <= 0 || years <= 0) {
         return alert("Введите корректные числовые значения!");
@@ -60,7 +60,7 @@ const calculatePayment = () => {
     monthPaymentFamily.textContent = calcMonthlyPayment(6) + " ₽";
 };
 
-document.getElementById("mortgage-form").addEventListener("submit", function (e) {
+document.getElementById("mortgage__form").addEventListener("submit", function (e) {
     e.preventDefault();
     calculatePayment();
 });
