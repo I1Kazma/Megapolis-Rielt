@@ -18,10 +18,12 @@ window.addEventListener("scroll", function () {
 });
 
 let tabs = document.querySelectorAll('.objects__item'),
+    tabsImg = document.querySelectorAll('.objects__img'),
     tabsContent = document.querySelectorAll('.objects__content'),
     tabsParent = document.querySelector('.objects__header');
 
-function hideTabContent() {
+
+const hideTabContent = () => {
     tabsContent.forEach(item => {
         item.classList.add('hide');
         item.classList.remove('show', 'fade');
@@ -32,23 +34,29 @@ function hideTabContent() {
     });
 }
 
-function showTabContent(i = 0) {
+const showTabContent = (i = 0) => {
     tabsContent[i].classList.add('show', 'fade');
     tabsContent[i].classList.remove('hide');
     tabs[i].classList.add('item-active');
 }
 
-hideTabContent();
-showTabContent();
 
-tabsParent.addEventListener('click', function (event) {
-    const target = event.target;
-    if (target && target.classList.contains('objects__item')) {
-        tabs.forEach((item, i) => {
-            if (target == item) {
-                hideTabContent();
-                showTabContent(i);
-            }
-        });
-    }
-});
+const tabsParentFunction = () => {
+    tabsParent.addEventListener('click', function (event) {
+        const target = event.target;
+        if (target && (target.classList.contains('objects__item') || target.classList.contains('objects__img'))) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+        }
+    });
+}
+
+if (tabs) {
+    hideTabContent();
+    showTabContent();
+    tabsParentFunction();
+}

@@ -17,35 +17,31 @@
 
 .mortrage__items
     display: flex
-    justify-content: space-between
     flex-wrap: wrap
-    gap: 20px
     width: 100%
-
-    @include mobile-big
-        justify-content: center
+    gap: 20px
+    justify-content: center
 
     .item
-        border: 1px solid white
-        border-radius: 550px
-        max-width: 175px
+        border-radius: 5px
+        background: #1c1c1c
+        max-width: 375px
+        width: 100%
 
-        @include tablet
-            max-width: 169px
+        @media (max-width: 810px)
+            max-width: none
 
-        @include mobile-big
-            max-width: 169px
+        &:hover
+            transform: translateY(-10px)
 
         a
-            margin: 28px 35px
+            padding: 28px 35px
+            height: 100%
             display: flex
             flex-direction: column
             align-items: center
             justify-content: center
-
             gap: 5px
-
-            max-width: 118px
 
             .title
                 color: white

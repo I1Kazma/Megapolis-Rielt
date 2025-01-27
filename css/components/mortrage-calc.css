@@ -1,0 +1,105 @@
+.mortgage-calc {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 70px;
+}
+.mortgage-calc__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.mortgage-calc__select::-ms-expand {
+  display: none;
+}
+.mortgage-calc__wrapper {
+  max-width: 1020px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 100%;
+}
+.mortgage-calc__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+.mortgage-calc__title {
+  font-size: 70px;
+  font-weight: 600;
+  color: rgb(167, 171, 177);
+}
+.mortgage-calc__description {
+  font-size: 16px;
+  color: rgb(254, 254, 254);
+  max-width: 643px;
+}
+.mortgage-calc__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+.mortgage-calc__info {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  max-width: 497px;
+}
+.mortgage-calc__button {
+  padding: 28px;
+  background: #FFD700;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+.mortgage-calc__value {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  gap: 5px;
+  position: relative;
+  align-items: center;
+}
+
+.mortgage-calc__input,
+.mortgage-calc__select {
+  background: transparent;
+  color: rgb(254, 254, 254);
+  font-size: 40px;
+  font-weight: 500;
+  padding: 0 20px 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.mortgage-calc__results {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 34px 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  max-width: 478px;
+}
+
+.mortgage-calc__result {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mortgage-calc__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}/*# sourceMappingURL=mortrage-calc.css.map */

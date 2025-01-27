@@ -1,0 +1,204 @@
+.mortgage-calc
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-top: 30px
+    padding: 0 20px 70px
+
+    @include tablet
+        padding-bottom: 40px
+
+    select
+        -webkit-appearance: none
+        -moz-appearance: none
+
+        &::-ms-expand
+            display: none
+
+.container
+    max-width: 1020px
+    display: flex
+    flex-direction: column
+    gap: 100px
+    width: 100%
+
+    @include desktop-small
+        gap: 70px
+    @include tablet
+        gap: 40px
+    @include mobile-big
+        gap: 30px
+
+.mortgage__heading
+    display: flex
+    flex-direction: column
+    gap: 34px
+
+    h1
+        font-size: 70px
+        font-weight: 600
+        color: #A7ABB1
+
+        @include tablet
+            font-size: 45px
+        @include mobile-big
+            font-size: 35px
+
+    p
+        font-size: 16px
+        color: #FEFEFE
+        max-width: 643px
+
+.mortgage__content
+    display: flex
+    justify-content: space-between
+    gap: 15px
+    width: 100%
+
+    @include tablet
+        flex-direction: column
+        gap: 30px
+
+form
+    display: flex
+    flex-direction: column
+    gap: 70px
+    max-width: 497px
+
+    @include tablet
+        max-width: none
+        gap: 35px
+
+    .mortgage__button
+        padding: 28px
+        background: $yellow
+        font-size: 20px
+        font-weight: 600
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 25px
+        border: none
+        cursor: pointer
+        transition: background 0.3s
+
+        &:hover
+            background: #ffe776
+
+.mortgage-value
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 5px
+    position: relative
+    border: 2px solid #FFF
+    border-radius: 25px
+    padding: 20px
+
+    option
+        color: black
+
+    input, select
+        background: transparent
+        color: #FEFEFE
+        font-size: 40px
+        font-weight: 500
+        border: none
+        outline: none
+        width: 100%
+        position: relative
+        z-index: 2
+
+        @include tablet
+            font-size: 28px
+            padding-bottom: 15px
+
+    .irs
+        position: absolute
+        width: 100%
+        bottom: 17px
+
+        &--round
+            width: 93%
+
+        &--round .irs-bar
+            background: $yellow
+            top: 65px
+
+        &--round .irs-handle
+            top: 54px
+
+        &-handle.single
+            width: 24px
+            height: 14px
+            border-radius: 7px
+            background: white
+            border: none
+            top: 60px
+
+        &-single
+            display: none
+
+    .irs--round .irs-min,
+    .irs--round .irs-max
+        font-size: 12px
+        color: #FEFEFE
+        border: none
+        background: none
+        top: 40px
+
+    label
+        font-size: 17px
+        font-weight: 400
+        color: #FEFEFE
+        width: 100%
+
+        @include tablet
+            padding-top: 15px
+
+.mortgage__results
+    display: flex
+    flex-direction: column
+    gap: 46px
+    max-width: 478px
+    padding: 34px 38px
+    border: 2px solid #FFF
+    border-radius: 25px
+
+    @include tablet
+        max-width: none
+        padding: 20px
+
+    h3
+        font-size: 32px
+        color: $yellow
+
+        @include tablet
+            font-size: 25px
+
+    h4
+        font-size: 15px
+        font-weight: 400
+        color: $grey
+
+    span
+        color: white
+        font-size: 32px
+        font-weight: 500
+
+    li
+        display: flex
+        flex-direction: column
+        gap: 30px
+
+    ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 30px
+
+        li, .mortgage__payment
+            display: flex
+            flex-direction: column
+            gap: 15px

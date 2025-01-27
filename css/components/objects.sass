@@ -29,6 +29,45 @@
     max-width: 100%
     position: relative
 
+.objects__vostok
+    background: url('../img/vostok.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    padding: 7px 60px
+
+    @include desktop-small
+        padding: 4px 60px
+
+.objects__lidino
+    background: url('../img/lidino.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    padding: 30px 60px
+
+    @include desktop-small
+        padding: 26px 41px
+
+    @include mobile-big
+        padding: 19px 40px
+
+.item-active
+
+    .objects__lidino, .objects__vostok
+        padding: 77px 120px
+
+        @include desktop-small
+            padding: 40px 76px
+
+    .objects__lidino
+        @include mobile-big
+            padding: 19px 40px
+
+    .objects__vostok
+        @include mobile-big
+            padding: 4px 60px
+
 .objects__header
     position: absolute
     z-index: 6

@@ -1,0 +1,111 @@
+$yellow: #F0CC20
+
+.accordion
+    display: flex
+    flex-direction: column
+    gap: 30px
+    width: 100%
+    position: relative
+    z-index: 1
+
+.faq
+    padding: 0px 20px 70px
+    position: relative
+
+    @include tablet
+        padding: 0px 20px 40px
+
+    .faq__heading
+        width: 100%
+
+        h2
+            font-size: 70px
+            font-weight: 600
+            color: #A7ABB1
+
+            @include tablet
+                font-size: 45px
+            @include mobile-big
+                font-size: 35px
+
+    .faq--bg
+        background-image: url('../img/mortrage_bg.png')
+        background-size: cover
+        position: absolute
+        background-repeat: no-repeat
+        width: 100%
+        height: 100%
+        top: -20px
+        z-index: 0
+        opacity: .3
+
+    .container
+        max-width: 1024px
+
+.cross
+    --width: 10px
+    --weight: 1px
+    --color: black
+    --angle: 45deg
+    grid-template-rows: var(--width)
+    grid-template-columns: var(--width)
+    overflow: hidden
+    border: none
+    background: none
+    display: grid
+    align-items: center
+    justify-content: center
+    justify-items: center
+    align-content: center
+    padding: 0
+
+    &:before, &:after
+        content: ''
+        width: var(--width)
+        height: var(--weight)
+        background: $yellow
+        transform-origin: center
+        grid-area: 1/1
+        transition: 0.3s ease
+
+    &:before
+        transform: rotate(var(--angle))
+
+    &:after
+        transform: rotate(calc(var(--angle) + 90deg))
+
+.faq-item
+    border: 1px dashed $yellow
+    border-radius: 8px
+    cursor: pointer
+    transition: 0.3s ease
+
+    &_question
+        padding: 24px 30px 20px 30px
+        font-size: 17px
+        color: white
+        font-weight: 600
+        display: flex
+        justify-content: space-between
+        align-items: center
+        transition: .3s
+
+    &_question:hover
+        color: $yellow
+
+    &_question-marker
+        --width: 16px
+        --weight: 2px
+        --color: $yellow
+        --angle: 0deg
+        transition: .3s
+        flex-shrink: 0
+
+    [open] &_question-marker
+        --angle: 45deg
+
+    &_answer
+        padding: 0 30px 24px 30px
+        font-size: 15px
+        line-height: 150%
+        color: white

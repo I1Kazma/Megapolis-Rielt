@@ -1,36 +1,40 @@
-.mortrage__layout {
+.mortgage-layout {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   gap: 38px;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
-.mortrage__items {
+.mortgage-items {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
   width: 100%;
+  gap: 20px;
   justify-content: center;
 }
-.mortrage__items .item {
-  border: 1px solid white;
-  border-radius: 550px;
-  max-width: 175px;
+
+.mortgage-item {
+  border-radius: 5px;
+  background: #1c1c1c;
+  max-width: 375px;
+  width: 100%;
 }
-.mortrage__items .item a {
-  margin: 28px 35px;
+.mortgage-item:hover {
+  transform: translateY(-10px);
+}
+.mortgage-item__link {
+  padding: 28px 35px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  max-width: 118px;
 }
-.mortrage__items .item a .title {
+.mortgage-item__title {
   color: white;
   text-align: center;
   font-size: 16px;

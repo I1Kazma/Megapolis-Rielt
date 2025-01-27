@@ -1,46 +1,28 @@
 .header {
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 11;
   background: #252525;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #252525;
 }
-
+.header--sticky {
+  border-bottom: 1px solid white;
+}
 .header__layout {
   padding: 26px 3%;
   display: flex;
   justify-content: space-between;
   gap: 30px;
   width: 100%;
-}
-
-.header__nav {
-  width: 100%;
   align-items: center;
-  display: flex;
-  justify-content: center;
-  max-width: 815px;
 }
-.header__nav ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.header__logo img {
+  max-width: 150px;
 }
-.header__nav a {
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-@media (max-width: 1200px) {
-  .header__nav a {
-    font-size: 12px;
-  }
-}
-
 .header__tel {
   display: flex;
   width: 100%;
@@ -49,11 +31,85 @@
   justify-content: center;
   gap: 5px;
 }
+.header__tel--hidden {
+  display: none;
+}
+.header__tel:hover span {
+  color: #FFD700;
+}
 .header__tel span {
   font-size: 15px;
   color: white;
   font-weight: bold;
 }
-.header__tel .colored {
-  color: #ffb500;
+.header__tel--colored {
+  color: #FFD700;
+}
+.header__toggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.header__toggle:hover span {
+  background: #0000FF;
+}
+.header__toggle span {
+  background: #FFD700;
+  height: 3px;
+  width: 25px;
+}
+
+.nav {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 815px;
+}
+.nav--mobile {
+  position: absolute;
+  background: black;
+  left: -1000px;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  padding: 50px;
+  gap: 50px;
+}
+.nav__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.nav__item {
+  display: flex;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  margin: -0.5px 0;
+}
+.nav__item:hover {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #FFD700;
+  border-bottom: 1px solid #FFD700;
+}
+.nav__link {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.nav__link:hover {
+  color: #FFD700;
+}
+.nav__social {
+  display: none;
+}
+.nav__social--visible {
+  display: flex;
 }/*# sourceMappingURL=header.css.map */
